@@ -17,10 +17,14 @@ class CellManager {
             case 'markdown':
                 this.runMarkdownCell(cell,cm);
                 break;
+            case 'c++':
+                console.log(cm.getValue());
+                break;
             default:
                 break;
         }
     }
+    run
     runMarkdownCell(cell,cm){
         cell.querySelector(".jp-MarkdownOutput").innerHTML=marked(cm.getValue());
         cell.querySelector('.Cell-MarkdownSource').style.display='none';
